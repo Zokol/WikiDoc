@@ -28,27 +28,29 @@ The operation of this program is following:
  - Open wiki-site in browser
 
 Sample project folder structure:
- /project
- |-- wikidoc.conf
- |-- /server
-     |-- file.py
-     |-- file2.py
-     |-- /modules
-         |-- sample.php
-     |-- /frontend
-         |-- frontend.php
- |-- /public
-     |-- /css
-     |-- /js
-         |-- init.js
-         |-- /ux
-             |-- form.js
-             |-- panel.js
- |-- /data
-     |-- data.json
+ -project
+    - wikidoc.conf
+    - server
+        - file.py
+        - file2.py
+        - /modules
+            - sample.php
+     - /frontend
+        - frontend.php
+ - /public
+    - /css
+    - /js
+        - init.js
+        - /ux
+            - form.js
+            - panel.js
+ - /data
+    - data.json
 
 Sample wikidoc.conf-file:
+
 wikiurl: http://wiki.testsite.com/index.php?title=
+
 wikipage_s: -
 
 Path used for sample.php:
