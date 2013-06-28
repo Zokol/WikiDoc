@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Service
+Actions=openWikiDoc
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/octet-stream
+
+[Desktop Action openWikiDoc]
+Name=Open in Wiki
+Icon=text-x-texinfo
+Exec=~/Programming/Python/wikidoc/wikidoc.py -f %f
