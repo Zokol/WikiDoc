@@ -66,11 +66,16 @@ def main(argv):
 		print "wikidoc.conf not found"
 		return False
 	conf = readconfig(os.path.join(root, 'wikidoc.conf'))
+	print conf
 	fullpath = os.path.relpath(os.path.realpath(filename), root)
-	if 'wikipage_s' in conf.values():
-		fullpath = fullpath.replace('/', string.strip(conf['wikipage_s']))
-		webbrowser.open(string.strip(conf['wikiurl']) + string.strip(conf(['wikipage_s'])) +fullpath)
+	if 'wikipage_s' in conf:
+		s = string.strip(conf['wikipage_s']) 
+		print "Separation character", s, "defined"
+		fullpath = fullpath.replace('/', s)
+		print fullpath
+		webbrowser.open(string.strip(conf['wikiurl']) + s +fullpath)
 	else:
+		print fullpath
 		webbrowser.open(string.strip(conf['wikiurl']) + '/' +fullpath)
 	quit()
 
