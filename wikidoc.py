@@ -34,6 +34,7 @@ Sample project folder structure:
 
 Sample wikidoc.conf-file:
 wikiurl: http://wiki.testsite.com/index.php?title=
+wikipage_s: -
 
 Path used for sample.php:
 /server/modules/sample.php
@@ -66,7 +67,11 @@ def main(argv):
 		return False
 	conf = readconfig(os.path.join(root, 'wikidoc.conf'))
 	fullpath = os.path.relpath(os.path.realpath(filename), root)
-	webbrowser.open(string.strip(conf['wikiurl']) + '/' +fullpath)
+	if 'wikipage_s' in conf.values():
+		fullpath = fullpath.replace('/', string.strip(conf['wikipage_s']))
+		webbrowser.open(string.strip(conf['wikiurl']) + string.strip(conf(['wikipage_s'])) +fullpath)
+	else:
+		webbrowser.open(string.strip(conf['wikiurl']) + '/' +fullpath)
 	quit()
 
 def getrootpath(filename):
