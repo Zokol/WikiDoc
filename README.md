@@ -28,14 +28,14 @@ The operation of this program is following:
  - Open wiki-site in browser
 
 Sample project folder structure:
- -project
-    - wikidoc.conf
-    - server
-        - file.py
-        - file2.py
-        - /modules
-            - sample.php
-     - /frontend
+ - project
+ - wikidoc.conf
+ - /server
+    - file.py
+    - file2.py
+    - /modules
+        - sample.php
+    - /frontend
         - frontend.php
  - /public
     - /css
