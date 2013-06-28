@@ -4,6 +4,7 @@ WikiDoc
     Wiki Documentation Reader
   
 Author: Heikki Juva, heikki@juva.lu
+
 Date: 28.06.2013
 
 Description: This program can be used to link project files to wiki-based documentation of the files. Tested with Mediawiki and GitHub-wiki.
